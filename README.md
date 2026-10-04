@@ -1,4 +1,4 @@
-Can your XAI method recover a simple decision rule? 
+# Can your XAI method recover a simple decision rule? 
 
 One model, one simple rule, and two inputs. The explanation methods tested herein can report feature attributions at arbitrary points accurately, yet none recovers the target rule. The capabilities and limits of XAI methods have been widely discussed in the literature [1]. Building on that prior work, this is a minimal demonstration of that exact attribution is not a decision rule.
 
@@ -11,7 +11,7 @@ We treat the model as a black box and probe its input and output using mainstrea
 ## 2. Grading
 
 Four levels are defined based on the outputs. 
-L1: the method outputs a unified rule that satisfies $\operatorname{sign}(h(x))=\operatorname{sign}(g(x))$ almost everywhere with no restriction to polynomial or logical forms. This is the perfect target. 
+L1: the method outputs a unified rule that satisfies ${sign}(h(x))={sign}(g(x))$ almost everywhere with no restriction to polynomial or logical forms. This is the perfect target. 
 L2: the method produces signs consistent with the rule sign at every valid probe point. It does not require numerical stability or a globally valid rule, and it is looser than L1.
 L3: the method outputs an interaction term. However, at least one probe point has a component with sign opposite to the rule. At this level the term may line up with the true rule, or it may be completely reversed.
 L4: the method produces no interaction terms. This is a factual property of the output format independent of probe points.
@@ -53,6 +53,8 @@ Their values are exact for local debugging and pointwise monitoring. I do not de
 
 ## 7. Reproducible Code
 https://github.com/Wen-Xuan-Wang/Sign_XOR_problem_for_XAI
+
+## 8. Reference
 
 [1] (a) Bilodeau, B., Jaques, N., Koh, P. W., Kim, B. (2024). Impossibility theorems for feature attribution. PNAS 121(2), e2304406120. https://doi.org/10.1073/pnas.2304406120. (b) Slack, D., Hilgard, S., Lakkaraju, H., Singh, S. (2021). Counterfactual explanations can be manipulated. NeurIPS, 62–75. https://dl.acm.org/doi/10.5555/3540261.3540267 (c) Brughmans, D., Melis, L., Martens, D. (2024). Disagreement amongst counterfactual explanations: how transparency can be misleading. TOP 32, 429–462. https://doi.org/10.1007/s11750-024-00670-2 (d) Marques-Silva, J., Huang, X. (2024). Explainability Is Not a Game. COMMUNICATIONS OF THE ACM 67(7), 66–75. https://dl.acm.org/doi/10.1145/3635301. (e) Suzuki, A., Wang, J. (2026) Fundamental Limitation in Explaining AI. arXiv:2605.24727v2. https://arxiv.org/abs/2605.24727.
 [2] Lundberg, S. M., Lee, S.-I. (2017). A unified approach to interpreting model predictions. NeurIPS, 4768–4777. https://dl.acm.org/doi/10.5555/3295222.3295230.
