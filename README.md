@@ -3,7 +3,7 @@
 One model, one simple rule, and two inputs. The explanation methods tested herein can report feature attributions at arbitrary points accurately, yet none recovers the target rule. The capabilities and limits of XAI methods have been widely discussed in the literature [1]. Building on that prior work, this is a minimal demonstration of that exact attribution is not a decision rule.
 
 ## 1. Setup
-Model $g(x_1,x_2)=-x_1x_2$. The rule labels the positive class when $x_1x_2<0$ and negative class when $x_1x_2>0$. The logit is positive when the two inputs have opposite signs and negative when they share the same sign. This is a sign XOR.
+Model $g(x_1,x_2)=-x_1x_2$. The rule labels the positive class when $x_1x_2<0$ and negative class when $x_1x_2>0$. This is a sign XOR.
 
 We treat the model as a black box and probe its input and output using mainstream XAI methods to see whether the decision logic can be recovered.
 ![Figure caption](ground_truth_plot.png)
